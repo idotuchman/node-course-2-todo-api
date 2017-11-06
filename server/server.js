@@ -22,27 +22,6 @@ app.post('/todos', ( req, res) => {
 
 app.listen(3000, () => {
   console.log('Starting on port 3000');
-  });
+});
 
-
-// var newTodo = new Todo({
-//   text: 'Wipe ass',
-//   completed: true,
-//   completedAt: 1988
-// });
-//
-// newTodo.save().then((doc) => {
-//   console.log('Saved todo', doc);
-// }, (e) => {
-//     console.log('Unable to save todo');
-// });
-
-// var newUser = new User({
-//   email: 'ido@gmail.com'
-// });
-//
-// newUser.save().then((doc) => {
-//   console.log(JSON.stringify(doc, undefined, 2));
-// }, (e) => {
-//   console.log('Unable to save user', e);
-// });
+module.exports = {app};
