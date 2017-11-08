@@ -29,7 +29,6 @@ app.get('/todos', (req, res) => {
   }
 });
 
-//GET /todos/132343
 app.get('/todos/:id', (req, res) => {
   var id = req.params.id;
   if (!ObjectID.isValid(id)) {
@@ -44,17 +43,6 @@ app.get('/todos/:id', (req, res) => {
   }).catch((e) => {
     res.status(400).send();
   });
-
-  //validate id using isValid
-    // 404 - send back empty send
-
-  //findById
-    // success
-      // if todo - send it back
-      // if no todo - 404 with empty body
-    // error
-      // 400 - and send empty body back
-
 });
 
 app.listen(3000, () => {
